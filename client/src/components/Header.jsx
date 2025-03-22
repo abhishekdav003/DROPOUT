@@ -34,14 +34,14 @@ const Header = () => {
   };
 
   return (
-    <header ref={headerRef} className="bg-white shadow-lg top-0 w-full z-50">
+    <header ref={headerRef} className="bg-white shadow-lg top-0 fixed w-full z-50 playfair-400">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Brand Logo / Name */}
         <a
           href="/"
           className="text-4xl font-bold text-gray-900 tracking-wide hover:text-blue-500 transition duration-100"
         >
-          BrandName
+          Dropout Engineers
         </a>
 
         {/* Desktop Navigation */}
@@ -49,7 +49,7 @@ const Header = () => {
           {['home', 'shop', 'about', 'contact'].map((item) => (
             <a
               key={item}
-              href={`#${item}`}
+              href={`${item}`}
               onClick={() => handleClick(item)}
               className={`text-lg font-medium transition duration-100 ${
                 activeItem === item ? 'text-blue-500' : 'text-gray-800'
@@ -90,7 +90,7 @@ const Header = () => {
             {['home', 'shop', 'about', 'contact'].map((item) => (
               <a
                 key={item}
-                href={`#${item}`}
+                href={`${item}`}
                 onClick={() => handleClick(item)}
                 className={`text-xl font-medium transition duration-100 ${
                   activeItem === item ? 'text-blue-500' : 'text-gray-800'

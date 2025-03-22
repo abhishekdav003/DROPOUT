@@ -19,3 +19,84 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Slightly narrower scrollbar */
+  height: 12px;
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  /* Dark blue-black background for track */
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow inside the track */
+}
+
+/* Scrollbar Thumb (The part that moves) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  /* Dark blue gradient for the thumb */
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+  /* Smooth transition effect */
+  animation: thumbAnimation 2s ease-in-out infinite;
+  /* Animated gradient for thumb */
+}
+
+/* Thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  transform: scale(1.2);
+  /* Slightly larger thumb on hover */
+  background: linear-gradient(45deg, #3c4a64, #4f6278);
+  /* Slightly lighter gradient on hover */
+  animation: none;
+  /* Stop animation on hover */
+}
+
+/* Thumb active effect */
+::-webkit-scrollbar-thumb:active {
+  background: #2c3e50;
+  /* Darker blue-gray when active */
+  transform: scale(1.1);
+  animation: none;
+  /* Stop animation when active */
+}
+
+/* Scrollbar Corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* For Firefox (Custom scrollbar) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b7197 #1a1a2e;
+  /* Dark thumb and track for Firefox */
+}
+
+/* Keyframes for animation */
+@keyframes thumbAnimation {
+  0% {
+    transform: scale(1);
+    background-position: 0 0;
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.1);
+    background-position: 100% 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    background-position: 0 0;
+    opacity: 0.9;
+  }
+}
