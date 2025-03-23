@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import WhatsAppIcon from '../components/WhatsappIcon';
 import Hero from '../components/Hero';
 import CustomScrollbar from '../components/CustomScrollBar';
+import Products from '../components/Products';
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 
 const Home = () => {
@@ -15,9 +17,9 @@ const Home = () => {
         <Hero />
         {/* Your main content here */}
         <div className="text-center p-10">
-          <h1 className="text-4xl font-bold">Welcome to Our Website!</h1>
-          <p className="mt-4">This is some content above the footer.</p>
+          <Products />
           <WhatsAppIcon />
+          <ScrollToTopButton />
         </div>
       </main>
       <Footer />
