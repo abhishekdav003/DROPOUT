@@ -10,7 +10,6 @@ const About = () => {
       <Header />
       <section className="relative bg-white text-gray-900 py-24 px-6 md:px-12">
         {/* Section Background */}
-        <div className="absolute inset-0 z-0 bg-cover bg-center opacity-10" style={{ backgroundImage: 'url(/path/to/your/image.jpg)' }}></div>
 
         <div className="max-w-screen-xl mx-auto relative z-10">
           {/* Title & Intro Section */}

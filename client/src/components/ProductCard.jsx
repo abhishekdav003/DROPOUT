@@ -13,7 +13,7 @@ const ProductCard = ({ product, onQuery }) => {
         <p className="text-gray-700 dark:text-gray-300 mb-4">{product.description}</p>
         <button
           onClick={() => onQuery(product)}
-          className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 rounded-lg hover:from-indigo-700 hover:to-blue-700 transition"
+          className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 rounded-lg hover:from-indigo-700 hover:to-blue-700 transition cursor-pointer"
         >
           Query Now
         </button>

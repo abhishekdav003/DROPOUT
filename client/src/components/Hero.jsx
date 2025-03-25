@@ -1,4 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+const handleScroll = () => {
+    // Scroll smoothly to the section with id 'discover-collection'
+    document.getElementById('Products').scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
 
 const Hero = () => {
   return (
@@ -18,12 +26,16 @@ const Hero = () => {
             </p>
 
             <div className="flex justify-center md:justify-start space-x-6 mt-8">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110">
+                  <button onClick={handleScroll} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
                 Explore Our Collection
               </button>
-              <button className="bg-transparent border-2 border-gray-900 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110">
-                Learn More
-              </button>
+              <Link to="/about">
+              <button className=" bg-transparent border-2 border-gray-900 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                
+                  Learn More
+                  
+                </button>
+                </Link>
             </div>
           </div>
 
