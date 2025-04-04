@@ -94,7 +94,7 @@ const Products = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-20">
-          <Link to="Shop">
+          <Link to="/Shop">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105">
             View Full Catalog
             </button>

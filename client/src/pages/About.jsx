@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <Header />
-      <section className="relative bg-white text-gray-900 py-24 px-6 md:px-12">
+      <section className="relative mt-10 md:mt-1 bg-white text-gray-900 py-24 px-6 md:px-12 playfair-400">
         {/* Section Background */}
 
         <div className="max-w-screen-xl mx-auto relative z-10">
@@ -36,7 +36,7 @@ const About = () => {
             <div className="relative flex items-center justify-center">
               <div className="w-full h-full overflow-hidden transform transition-all hover:scale-105 duration-300">
                 <img
-                  src="/src/assets/factory.png"
+                  src="https://res.cloudinary.com/dvlh2e6d0/image/upload/v1743748791/tdtsglf2dphwmqptnsgv.png"
                   alt="Factory Process"
                   className="object-cover w-full h-full"
                 />

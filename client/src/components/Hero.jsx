@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const handleScroll = () => {
-    // Scroll smoothly to the section with id 'discover-collection'
-    document.getElementById('Products').scrollIntoView({
-      behavior: 'smooth',
-    });
-  };
+  // Scroll smoothly to the section with id 'discover-collection'
+  document.getElementById('Products').scrollIntoView({
+    behavior: 'smooth',
+  });
+};
 
 const Hero = () => {
   return (
     <section className="relative bg-gray-100 text-gray-900 py-24 px-6 md:px-12">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 bg-cover bg-center opacity-40" style={{ backgroundImage: 'url(/path/to/your/image.jpg)' }}></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-40 z-0" style={{ backgroundImage: 'url(/path/to/your/image.jpg)' }}></div>
 
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="text-center md:text-left flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
@@ -26,23 +26,21 @@ const Hero = () => {
             </p>
 
             <div className="flex justify-center md:justify-start space-x-6 mt-8">
-                  <button onClick={handleScroll} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+              <button onClick={handleScroll} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
                 Explore Our Collection
               </button>
               <Link to="/about">
-              <button className=" bg-transparent border-2 border-gray-900 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
-                
+                <button className="bg-transparent border-2 border-gray-900 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transform transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
                   Learn More
-                  
                 </button>
-                </Link>
+              </Link>
             </div>
           </div>
 
           {/* Right Side: Image or Graphic */}
           <div className="relative md:w-1/2">
             <img
-              src="src/assets/display.png"
+              src="https://res.cloudinary.com/dvlh2e6d0/image/upload/v1743748792/i8x24orfgxe8cdqr1hpx.png"
               alt="Fashion Image"
               className="w-full mx-auto md:mx-0 transition duration-300 ease-in-out transform hover:scale-110"
             />

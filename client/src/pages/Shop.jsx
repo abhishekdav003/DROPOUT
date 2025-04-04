@@ -7,6 +7,13 @@ import ProductCard from '../components/ProductCard';
 import QueryModal from '../components/QueryModel';
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
+const handleScroll = () => {
+    // Scroll smoothly to the section with id 'discover-collection'
+    document.getElementById('featured').scrollIntoView({
+      behavior: 'smooth',
+    });
+};
+
 const Shop = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -72,42 +79,47 @@ const Shop = () => {
   }, {});
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 font-sans">
+    <div className="flex flex-col mt-10 md:mt-1 min-h-screen bg-gray-50 font-sans playfair-400">
       <Header />
 
       <main className="flex-1">
         {/* Why Shop With Us Section */}
+        
+
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white py-24 text-center relative">
+          <h1 className="text-5xl font-extrabold mb-6">Welcome to Our Shop</h1>
+          <p className="text-lg max-w-3xl mx-auto mb-6">
+            Explore premium clothes and cosmetics crafted to perfection.
+          </p>
+          <button
+            onClick={handleScroll}
+            className="bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Start Shopping
+          </button>
+        </section>
+
         <section className="py-24 px-6 bg-gray-100">
           <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">Why Shop With Us?</h2>
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300">
+            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300 transform hover:scale-105">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Quality Products</h3>
               <p className="text-gray-600">We carefully select high-quality items, ensuring your satisfaction with every purchase.</p>
             </div>
-            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300">
+            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300 transform hover:scale-105">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Fast & Reliable Shipping</h3>
               <p className="text-gray-600">Our reliable shipping service ensures that your order will arrive quickly and safely.</p>
             </div>
-            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300">
+            <div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition ease-in-out duration-300 transform hover:scale-105">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Customer Support</h3>
               <p className="text-gray-600">Our dedicated team is always available to help you with any questions or concerns.</p>
             </div>
           </div>
         </section>
 
-        {/* Hero Section */}
-        <section className="bg-blue-600 text-white py-24 text-center relative">
-          <h1 className="text-5xl font-extrabold mb-6">Welcome to Our Shop</h1>
-          <p className="text-lg max-w-3xl mx-auto mb-6">
-            Explore premium clothes and cosmetics crafted to perfection.
-          </p>
-          <button className="bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out">
-            Start Shopping
-          </button>
-        </section>
-
         {/* Featured Products Section */}
-        <section className="py-24 px-6 bg-white">
+        <section id="featured" className="py-24 px-6 bg-white">
           <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">Featured Products</h2>
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {groupedProducts.Clothes?.map((product) => (

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import WhatsAppIcon from "../components/WhatsappIcon";
 import { toast, ToastContainer } from "react-toastify"; // Import ToastContainer and toast
 import 'react-toastify/dist/ReactToastify.css'; // Import the Toastify CSS
-import img from "../assets/contact.png";
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -92,7 +92,7 @@ function Contact() {
       <ToastContainer />
 
       <Header />
-      <section className="relative bg-gray-50 text-gray-900 py-10 px-6 md:px-12 mb-0"> {/* Removed excessive padding and margin-bottom */}
+      <section className=" mt-10 md:mt-1 relative bg-gray-50 text-gray-900 py-10 px-6 md:px-12 mb-0 playfair-400"> {/* Removed excessive padding and margin-bottom */}
         {/* Background Image */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
@@ -116,8 +116,11 @@ function Contact() {
               </div>
 
               <div id="2">
-                <img src={img} alt="Factory" />
-              </div>
+  <img 
+    src="https://res.cloudinary.com/dvlh2e6d0/image/upload/v1743748791/ddpq07gmdizffcn94ixz.png" 
+    alt="Factory" 
+  />
+</div>
             </div>
 
             {/* Right Side: Contact Form */}

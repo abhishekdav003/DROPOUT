@@ -100,3 +100,39 @@
     opacity: 0.9;
   }
 }
+
+/* In your CSS or Tailwind config */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    /* Ensure the header remains fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 50;
+  }
+
+  /* Adjust logo font size and navigation padding for smaller screens */
+  .text-4xl {
+    font-size: 2.25rem;
+    /* Adjust logo size for small screens */
+  }
+
+  /* .hidden {
+    display: block;
+  
+  } */
+
+  /* Add padding and background to the mobile menu */
+  .mobile-nav {
+    background-color: white;
+    padding-top: 2rem;
+  }
+
+  /* Adjust the mobile menu links to be full width and centered */
+  .mobile-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+}
